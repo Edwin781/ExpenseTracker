@@ -19,6 +19,7 @@ if(process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
+app.use('/', transactions)
 app.use('/api/v1/transactions', transactions);
 
 if(process.env.NODE_ENV === 'production') {
