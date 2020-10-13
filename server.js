@@ -20,6 +20,7 @@ if(process.env.NODE_ENV === 'development') {
 }
 
 app.use('/', transactions)
+app.use('/test',transactions)
 app.use('/api/v1/transactions', transactions);
 
 if(process.env.NODE_ENV === 'production') {
