@@ -14,10 +14,15 @@ const transactions = require('./routes/transactions');
 const app = express();
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'build')))
 
 if(process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.use('/', transactions)
 app.use('/api/v1/transactions', transactions);
