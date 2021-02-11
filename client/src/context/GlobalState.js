@@ -20,7 +20,7 @@ export const GlobalProvider = ({ children }) => {
   async function getTransactions() {
     try {
       const res = await axios.get('/api/v1/transactions');
-
+      console.log("This is response", res)
       dispatch({
         type: 'GET_TRANSACTIONS',
         payload: res.data.data
