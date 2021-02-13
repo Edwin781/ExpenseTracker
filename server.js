@@ -20,6 +20,8 @@ if(process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
+app.use(morgan('dev'));
+
 
 /* app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
