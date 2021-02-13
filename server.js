@@ -20,13 +20,8 @@ if(process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-app.use(morgan('dev'));
-
-
-/* app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});  */
 app.use('/', transactions)
+
 app.use('/api/v1/transactions', transactions);
 
  if(process.env.NODE_ENV === 'production') {
@@ -36,10 +31,7 @@ app.use('/api/v1/transactions', transactions);
 } 
 
 
-
 const PORT = process.env.PORT || 5000;
-
-console.log("This is port", process.env.MONGO_URI)
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
 
