@@ -2,6 +2,8 @@
 
 > Full stack expense tracker
 
+Demo https://expensetracker700.herokuapp.com/
+
 ## Usage
 
 ```
