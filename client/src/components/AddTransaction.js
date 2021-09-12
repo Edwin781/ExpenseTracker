@@ -10,15 +10,17 @@ export const AddTransaction = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const newTransaction = {
+     const newTransaction = {
       text,
       amount: +amount
     }
 
+    
     addTransaction(newTransaction);
 
-    setText(" ");
-    setAmount(" ")
+    setText("");
+    setAmount("");
+    
   }
 
   return (
