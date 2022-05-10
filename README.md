@@ -32,4 +32,4 @@ change config.env file in config folder
  npm start
 ```
 
-This project is part of an tutorial by traversymedia.
+This project is part of a tutorial by traversymedia.
