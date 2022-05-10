@@ -31,3 +31,5 @@ change config.env file in config folder
  # Prod
  npm start
 ```
+
+This project is part of an tutorial by traversymedia.
